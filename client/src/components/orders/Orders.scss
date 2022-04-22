@@ -25,16 +25,30 @@
       font-size: 2.2rem;
       font-weight: 700;
     }
+  }
 
-    .orders__search-input {
-      font-family: "Roboto", sans-serif;
-      border: 0.1rem solid variables.$primary-theme-color;
-      border-radius: 1rem;
-      padding: 1rem 1.5rem;
-      outline: none;
-      font-weight: 400;
-      font-size: 1.6rem;
-      width: 30%;
+  &__bottom {
+    height: 90%;
+  }
+
+  // DATA GRID STYLING
+
+  .orders-datagrid__image-container {
+    img {
+      width: 100%;
     }
+  }
+
+  .MuiDataGrid-columnHeaderTitle {
+    font-size: 1.6rem;
+    font-weight: 700;
+  }
+
+  .MuiDataGrid-row {
+    font-size: 1.6rem;
+  }
+
+  .MuiDataGrid-cell {
+    white-space: normal !important;
   }
 }
