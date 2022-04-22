@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ordersData from "../../assets/ordersData/orders.json";
-import { DataGrid } from "@mui/x-data-grid";
+import { DataGrid, GridToolbar } from "@mui/x-data-grid";
 import "./Orders.scss";
 
 function Orders() {
@@ -38,67 +38,57 @@ function Orders() {
       field: "created",
       headerName: "Created",
       width: 110,
-      headerClassName: "orders-datagrid__header",
       headerAlign: "center",
     },
     {
       field: "status",
       headerName: "Status",
       width: 110,
-      headerClassName: "orders-datagrid__header",
       headerAlign: "center",
     },
     {
       field: "customer",
       headerName: "Customer",
       width: 160,
-      headerClassName: "orders-datagrid__header",
       headerAlign: "center",
     },
     {
       field: "sku",
       headerName: "SKU",
       width: 130,
-      headerClassName: "orders-datagrid__header",
       headerAlign: "center",
     },
     {
       field: "condition",
       headerName: "Condition",
       width: 140,
-      headerClassName: "orders-datagrid__header",
       headerAlign: "center",
     },
     {
       field: "size",
       headerName: "Size",
       width: 60,
-      headerClassName: "orders-datagrid__header",
       headerAlign: "center",
     },
     {
       field: "type",
       headerName: "Type",
-      headerClassName: "orders-datagrid__header",
       headerAlign: "center",
     },
     {
       field: "origin_address",
       headerName: "Origin Address",
       width: 250,
-      headerClassName: "orders-datagrid__header",
       headerAlign: "center",
     },
     {
       field: "shipping_address",
       headerName: "Shipping Address",
       width: 250,
-      headerClassName: "orders-datagrid__header",
       headerAlign: "center",
     },
   ];
 
-  //   console.log(orders);
   return (
     <section className="orders">
       <div className="orders__container main-container">
@@ -112,6 +102,7 @@ function Orders() {
             initialState={{
               sorting: { sortModel: [{ field: "created", sort: "desc" }] },
             }}
+            components={{ Toolbar: GridToolbar }}
           />
         </div>
       </div>
