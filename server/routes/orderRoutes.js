@@ -7,6 +7,7 @@ const {
 
 const router = express.Router();
 
-router.route("/").get(getAllOrders).post(createOrder).patch(updateOrder);
+router.route("/").get(getAllOrders).post(createOrder);
+router.route("/:id").patch(updateOrder);
 
 module.exports = router;
