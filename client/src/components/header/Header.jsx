@@ -36,8 +36,8 @@ function Header() {
         </div>
         <nav className="header__nav">
           <ul>
-            {createLink("/", "Home")}
-            {createLink("#", "About Us")}
+            {createLink("/", "Orders")}
+            {createLink("/create-order", "Create Order")}
             {createLink("#", "Services")}
             {createLink("#", "Resources")}
             {createLink("#", "Contact Us")}
@@ -47,7 +47,7 @@ function Header() {
           <motion.a
             whileHover={{ rotate: "1turn", scale: 1.1 }}
             transition={{ duration: 0.4 }}
-            href="https://github.com/harshitbehl/omnipresent-harshitbehl"
+            href="https://github.com/harshitbehl/boxhub-harshitbehl"
           >
             <BsGithub className="header__github-icon" />
           </motion.a>

@@ -13,8 +13,8 @@ function App() {
       <Header />
       {/* Pages */}
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="*" element={<div>Page Not Found!</div>} />
+        <Route path="/*" element={<Home />} />
+        {/* <Route path="*" element={<div>Page Not Found!</div>} /> */}
       </Routes>
       {/* Footer */}
       <Footer />
