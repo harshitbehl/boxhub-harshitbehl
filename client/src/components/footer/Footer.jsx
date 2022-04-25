@@ -15,6 +15,7 @@ import {
 import { motion } from "framer-motion";
 
 function Footer() {
+  // Link Creator Function
   const createLink = (link, text) => {
     return (
       <li>

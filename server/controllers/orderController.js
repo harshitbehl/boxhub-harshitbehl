@@ -81,9 +81,31 @@ const deleteOrder = async (req, res) => {
   }
 };
 
+// Get Specific Order | GET Request
+const getOrder = async (req, res) => {
+  try {
+    const order = await Order.findById(req.params.id);
+
+    if (!order) throw "No order found with that ID";
+
+    res.status(200).json({
+      status: "success",
+      data: {
+        order: order,
+      },
+    });
+  } catch (error) {
+    res.status(404).json({
+      status: "fail",
+      data: error,
+    });
+  }
+};
+
 module.exports = {
   getAllOrders,
   createOrder,
   updateOrder,
   deleteOrder,
+  getOrder,
 };

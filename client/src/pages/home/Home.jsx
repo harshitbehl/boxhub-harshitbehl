@@ -10,8 +10,8 @@ function Home() {
     <div className="home">
       <Routes>
         <Route path="/" element={<Orders />} />
-        <Route path="update-order" element={<OrdersUpdate />} />
-        <Route path="create-order" element={<OrdersCreate />} />
+        <Route path="/update-order/:orderId" element={<OrdersUpdate />} />
+        <Route path="/create-order" element={<OrdersCreate />} />
         <Route path="*" element={<div>Page Not Found!</div>} />
       </Routes>
     </div>

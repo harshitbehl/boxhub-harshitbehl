@@ -102,7 +102,7 @@ function Orders() {
       headerName: "Actions",
       renderCell: (params) => (
         <div className="orders-datagrid__actions-container">
-          <Link to="/update-order">
+          <Link to={`/update-order/${params.row._id}`}>
             <button>Edit</button>
           </Link>
 

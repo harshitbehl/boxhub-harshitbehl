@@ -3,12 +3,22 @@ import "./OrdersForm.scss";
 
 import { Formik, Form, Field, ErrorMessage } from "formik";
 
-function OrdersForm({ submitHandler }) {
+function OrdersForm({
+  submitHandler,
+  submitButton,
+  orderValues,
+  validationSchema,
+}) {
   const createField = (labelText, name, placeholder) => {
     return (
       <div className="orders-form__field-container">
         <label htmlFor={name}>{labelText}</label>
-        <Field type="text" name={name} placeholder={placeholder} />
+        <Field
+          type="text"
+          name={name}
+          placeholder={orderValues ? orderValues[name] : placeholder}
+          className={orderValues ? "orders-form__field" : ""}
+        />
         <span className="orders-form__error-message">
           <ErrorMessage name={name} />
         </span>
@@ -31,7 +41,7 @@ function OrdersForm({ submitHandler }) {
         origin_address: "",
         shipping_address: "",
       }}
-      //   validationSchema={validationSchema}
+      validationSchema={validationSchema || ""}
       onSubmit={submitHandler}
     >
       {({ values }) => (
@@ -54,7 +64,7 @@ function OrdersForm({ submitHandler }) {
           </div>
 
           <div className="orders-form__button-container">
-            <button type="submit">Create</button>
+            <button type="submit">{submitButton}</button>
           </div>
         </Form>
       )}
