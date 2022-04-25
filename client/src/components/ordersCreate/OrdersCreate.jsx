@@ -9,8 +9,10 @@ function OrdersCreate() {
   // Create order handler
   const handleCreate = async (values, { resetForm }) => {
     try {
-      await axios.post("/api/v1/orders", values);
-      console.log("Order Created");
+      await axios.post(
+        "https://boxhubapi-harshitbehl.herokuapp.com/api/v1/orders",
+        values
+      );
     } catch (error) {
       console.log(error);
     }

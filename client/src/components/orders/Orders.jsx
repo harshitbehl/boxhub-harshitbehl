@@ -11,7 +11,9 @@ function Orders() {
   useEffect(() => {
     const getOrders = async () => {
       try {
-        const res = await axios.get("/api/v1/orders");
+        const res = await axios.get(
+          "https://boxhubapi-harshitbehl.herokuapp.com/api/v1/orders"
+        );
         setOrders(res.data.data.orders);
       } catch (error) {
         console.log(error);
@@ -22,7 +24,9 @@ function Orders() {
 
   // Delete Order Handler
   const handleDelete = async (docId) => {
-    await axios.delete(`/api/v1/orders/${docId}`);
+    await axios.delete(
+      `https://boxhubapi-harshitbehl.herokuapp.com/api/v1/orders/${docId}`
+    );
   };
 
   // Data Grid Column

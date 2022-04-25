@@ -13,7 +13,9 @@ function OrdersUpdate() {
   useEffect(() => {
     const getOrder = async () => {
       try {
-        const res = await axios.get(`/api/v1/orders/${params.orderId}`);
+        const res = await axios.get(
+          `https://boxhubapi-harshitbehl.herokuapp.com/api/v1/orders/${params.orderId}`
+        );
         setOrder(res.data.data.order);
       } catch (error) {
         console.log(error);
@@ -32,7 +34,10 @@ function OrdersUpdate() {
     });
 
     try {
-      await axios.patch(`/api/v1/orders/${params.orderId}`, values);
+      await axios.patch(
+        `https://boxhubapi-harshitbehl.herokuapp.com/api/v1/orders/${params.orderId}`,
+        values
+      );
     } catch (error) {
       console.log(error);
     }
