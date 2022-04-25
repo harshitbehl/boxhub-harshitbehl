@@ -4,7 +4,7 @@
 
 # Boxhub Take Home Task
 
-An interactive Full Stack Web Application to view Orders and perform CRUD operations on them.
+An interactive Full Stack Web Application to view Orders and perform CRUD operations on them. 🚀
 
 ## 🔗 Live Demo
 
@@ -111,7 +111,7 @@ Start the server
 - Deploy client on vercel.
 - Deploy server on heroku.
 
-**API Reference**
+## 🚀 API Reference
 
 - Get All Orders (GET): https://boxhubapi-harshitbehl.herokuapp.com/api/v1/orders
 - Get Specific Order (GET): https://boxhubapi-harshitbehl.herokuapp.com/api/v1/orders/:orderId
