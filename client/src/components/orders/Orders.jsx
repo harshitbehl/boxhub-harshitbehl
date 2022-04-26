@@ -7,6 +7,7 @@ import "./Orders.scss";
 
 function Orders() {
   const [orders, setOrders] = useState([]);
+  const [deleteOrder, setDeleteOrder] = useState(false);
 
   useEffect(() => {
     const getOrders = async () => {
@@ -20,13 +21,15 @@ function Orders() {
       }
     };
     getOrders();
-  }, [orders]);
+    setDeleteOrder(false);
+  }, [deleteOrder]);
 
   // Delete Order Handler
   const handleDelete = async (docId) => {
     await axios.delete(
       `https://boxhubapi-harshitbehl.herokuapp.com/api/v1/orders/${docId}`
     );
+    setDeleteOrder(true);
   };
 
   // Data Grid Column
